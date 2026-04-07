@@ -1,6 +1,6 @@
 const { getConfig } = require('../helper/cache')
 
-const API_URL = 'https://apitest-v2-1.justlend.org/index/vault/list';
+const API_URL = 'https://rivoxa.justlend.org/index/vault/list';
 
 const TOKEN_MAPPING = {
   'TSkW3KiyHNbS9ozn99PHZz6rz1V2DMBFVa': 'bitcoin',
