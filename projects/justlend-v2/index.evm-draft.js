@@ -29,7 +29,12 @@ const config = {
   tron: {
     morphoBlue: "TDH4dhmVQQNc1ZNudJwWzBcs2h6ahhWrpp",
     fromBlock: 81622428,
-    // the token below was hard-coded in the official borrowed() — kept here via blackList
+    // Mirrors the official index.js hard-coded skip in borrowed(). The address is the
+    //   "GMORPHO" token contract on Base (decimals 18); on Tron it has no code/account.
+    //   It is a 0x EVM address, while the sdk returns Tron tokens as base58 T..., so this
+    //   entry matches nothing on Tron and is inert here — kept only for parity with the
+    //   live adapter. If JustLend V2 launches on Base, this exclusion would belong in the
+    //   base config's blackList, where it would actually fire.
     blackList: ["0xda1c2c3c8fad503662e41e324fc644dc2c5e0ccd"],
     blacklistedMarketIds: [],
   },
